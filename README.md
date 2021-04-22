@@ -21,15 +21,17 @@ User can see the highest frequency of his text, as well as a list of the most �
 User can type a word (FRECUENCY CALCULATOR) to find its frequency
 
 
-Normal Flow:
-After the page loads, the user will be presented with an input text to introduce a desired text of words, as well as an “analyze” button, this button are disabled when text is empty.
-As user types the text, as soon as the program detects more than 1 word, the analyse button will be enabled, under the textfield it will display automatically the amount of words the user types.
-As the user hits Calculate: - The program will display the text, as well of three widgets:- Top N words widget : which will allow the user to read the most frequent “n” words, the user is able to change the “N” number via a textfield/stepper- Highest frequency words widget: this will display the overall most frequently used words in the text- Frequency Calculator widget: this widget will offer the capability to type a word and display its frequency in the text, when the word is found in the text, as a bonus user experience, the program will collect a photograph from the internet of the word filled in the widget
+## Normal Flow:
+After the page loads, the user will be presented with an input text to introduce a desired text of words, as well as an “analyze” button, this button is disabled while text is empty.
+As user types the text, the program detects words being typed, the analyse button will be enabled, under the textfield it will display the amount of words the user types.
+As the user hits Analyze, the program will display the text and three widgets:
+  - Top N words widget, which will allow the user to read the most frequent “n” words, the user is able to change the “N” number via a textfield/stepper, the frequent words can be selected in order to be displayed highlighted in the text.
+  - Highest frequency words widget: this will display the overall most frequently used words in the text, the frequent words can be selected in order to be displayed highlighted in the text.
+  - Frequency Calculator widget: this widget will offer the capability to type a word and display its frequency in the text, when the word is found in the text, as a bonus user experience, the program will collect a photograph from the internet of the word filled in the widget.
 
 Extensions:
 1A. After displaying the results, a new button appears “Start again”
 As the user clicks this button, it will clear the text field for a new operation.
-
 
 
 ## Available Scripts
