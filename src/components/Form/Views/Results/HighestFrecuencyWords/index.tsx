@@ -18,6 +18,7 @@ import { top20Colors } from '../../../../../constants/TopFrecuencyColors';
 //styles
 import '../Results.css';
 import { IHighestFrequencyWords } from '../../../../../interfaces/IHighestFrequencyWords';
+import { calculateFrequency, clearFrequencyState, setWordToCalculateFrequency } from '../../../../../redux/actions/form';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -32,6 +33,13 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const wordFrequencyAnalyzerHelper: WordFrequencyAnalyzerHelper = new WordFrequencyAnalyzerHelper();
+
+// dispatch redux actions when clicking a word for frequency calculation and display as highlighted
+const onClickListItem = (wordToCalculate: string, dispatch: any) => {
+    dispatch(clearFrequencyState());
+    dispatch(setWordToCalculateFrequency(wordToCalculate));
+    dispatch(calculateFrequency());
+}
 
 // component that renders the highest frequency words widget
 const HighestFrequencyWords: React.FunctionComponent<IHighestFrequencyWords> = (props: IHighestFrequencyWords) => {
@@ -63,7 +71,7 @@ const HighestFrequencyWords: React.FunctionComponent<IHighestFrequencyWords> = (
                 {
                     mostFrequentWords.map((word, index) => {
                         return (
-                            <ListItem button key={word.getWord() + "_" + word.getFrequency() + "__li"}>
+                            <ListItem button key={word.getWord() + "_" + word.getFrequency() + "__li"} onClick={(ev) => onClickListItem(word.getWord(), props.dispatch)}>
                                 <ListItemIcon>
                                     <Avatar style={{ backgroundColor: top20Colors[index] }}>{word.getFrequency()}</Avatar>
                                 </ListItemIcon>

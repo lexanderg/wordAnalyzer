@@ -1,4 +1,5 @@
+import { IDispatcher } from "./IDispatcher";
 
-export interface IHighestFrequencyWords {
+export interface IHighestFrequencyWords extends IDispatcher {
     text: string;
 }
