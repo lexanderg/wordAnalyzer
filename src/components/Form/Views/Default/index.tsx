@@ -14,6 +14,7 @@ import { clearFrequencyState, setFormView, setText } from '../../../../redux/act
 import { IDefaultView } from '../../../../lib/interfaces/IDefaultView';
 //styles
 import './Default.css';
+import { WordFrequencyAnalyzerHelper } from '../../../../lib/WordFrecuencynalyzerHelper';
 
 // clean state - move to results view
 const cleanFrequencyStateAndGoToResultsView = (dispatch: any) => {
@@ -21,10 +22,13 @@ const cleanFrequencyStateAndGoToResultsView = (dispatch: any) => {
     dispatch(setFormView(FormView.RESULTS_VIEW));
 }
 
+const wordFrequencyAnalyzerHelper: WordFrequencyAnalyzerHelper = new WordFrequencyAnalyzerHelper();
+
 // component that renders main input text form
 const DefaultView: React.FunctionComponent<IDefaultView> = (props: IDefaultView) => {
 
-    const isAnalizedButtonEnabled: boolean = props.text.length > 0;
+    const totalAmountOfWords: number = wordFrequencyAnalyzerHelper.countWordsInText(props.text);
+    const isAnalizedButtonEnabled: boolean = totalAmountOfWords > 0;
 
     return (
         <motion.div animate={{ scale: [0.5, 1] }} transition={{ duration: 0.4 }} className='textFieldContainer'>

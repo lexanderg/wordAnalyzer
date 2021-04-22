@@ -23,11 +23,12 @@ const Form: React.FunctionComponent<IForm> = (props: IForm) => {
             <div className='formWrapper'>
                 <Typography style={{ fontFamily: 'Dancing Script', padding: 20 }} variant="h3" component="h3" className="mainTitle">
                     The WordAnalyzer
-            </Typography>
-                {FormViewFactory.create(props.view)}
-                <Typography style={{ fontFamily: 'Special Elite', padding: 5, fontSize: 15, position: 'absolute', bottom: 0, right: 0 }} variant="h3" component="h3" className="mainTitle">
+                </Typography>
+                <Typography style={{ fontFamily: 'Special Elite', fontSize: 14, paddingBottom: 5 }} variant="h3" component="h3" className="mainTitle">
                     Showcase by Alexander Gomez
-            </Typography>
+                </Typography>
+                {FormViewFactory.create(props.view)}
+
             </div>
     );
 };

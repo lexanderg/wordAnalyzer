@@ -9,6 +9,9 @@ import { WordFrequencyAnalyzer } from '../../../../../lib';
 // local assets
 import trophy from '../../../../../assets/trophy.png';
 
+//redux
+import { calculateFrequency, clearFrequencyState, setWordToCalculateFrequency } from '../../../../../redux/actions/form';
+
 // styles
 import '../Results.css';
 
@@ -33,6 +36,13 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const wordFrequencyAnalyzer: WordFrequencyAnalyzer = new WordFrequencyAnalyzer();
+
+// dispatch redux actions when clicking a word for frequency calculation and display as highlighted
+const onClickListItem = (wordToCalculate: string, dispatch: any) => {
+    dispatch(clearFrequencyState());
+    dispatch(setWordToCalculateFrequency(wordToCalculate));
+    dispatch(calculateFrequency());
+}
 
 const TopWords: React.FunctionComponent<ITopWords> = (props: ITopWords) => {
 
@@ -80,7 +90,7 @@ const TopWords: React.FunctionComponent<ITopWords> = (props: ITopWords) => {
                 {
                     wordFrequencyArray.map((word, index) => {
                         return (
-                            <ListItem button key={word.getWord() + "_" + word.getFrequency() + "__li"}>
+                            <ListItem button key={word.getWord() + "_" + word.getFrequency() + "__li"} onClick={(ev) => onClickListItem(word.getWord(), props.dispatch)}>
                                 <ListItemIcon>
                                     <Avatar style={{ backgroundColor: top20Colors[index] }}>{word.getFrequency()}</Avatar>
                                 </ListItemIcon>

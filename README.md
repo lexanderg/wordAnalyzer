@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# Word Analyzer showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo
+
+you can visit http://www.machinedevops.com/wordanalyzer/
+
+## Use Case
+
+Primary Actor: User
+
+Pre-conditions: 
+User loaded the word processor SPA
+Text field displays a placeholder description of where to type
+
+Post-conditions: 
+User can see the highest frequency of his text, as well as a list of the most “n” frequent words 
+User can type a word (FRECUENCY CALCULATOR) to find its frequency
+
+
+Normal Flow:
+After the page loads, the user will be presented with an input text to introduce a desired text of words, as well as an “analyze” button, this button are disabled when text is empty.
+As user types the text, as soon as the program detects more than 1 word, the analyse button will be enabled, under the textfield it will display automatically the amount of words the user types.
+As the user hits Calculate:  - The program will display the text, as well of three widgets: - Top N words widget : which will allow the user to read the most frequent “n” words, the user is able to change the “N” number via a textfield/stepper - Highest frequency words widget: this will display the overall most frequently used words in the text - Frequency Calculator widget: this widget will offer the capability to type a word and display its frequency in the text, when the word is found in the text, as a bonus user experience, the program will collect a photograph from the internet of the word filled in the widget
+
+Extensions:
+1A. After displaying the results, a new button appears “Start again”
+As the user clicks this button, it will clear the text field for a new operation.
+
+
 
 ## Available Scripts
 
@@ -24,26 +50,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# wordanalyzer_showcase
-# wordanalyzer
-# thewordanalyzer
