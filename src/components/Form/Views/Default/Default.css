@@ -1,0 +1,11 @@
+.textFieldContainer {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    flex-direction: column;
+    width: 50%;
+    min-height: 200px;
+}

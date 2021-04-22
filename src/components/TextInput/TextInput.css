@@ -1,0 +1,12 @@
+.textInputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wordCounterParagraph {
+    font-size: small;
+    text-align: end;
+    color: #3f51b5;
+    padding-right: 10px;
+}
