@@ -2,7 +2,11 @@
 
 ## Live demo
 
-you can visit http://www.machinedevops.com/wordanalyzer/
+http://www.machinedevops.com/wordanalyzer/
+
+## User Story
+
+As a User I want to be able to input text in a program, that calculates highest frequency, most popular words, and frequency of a specific word of my text, so that I do not need to count them manually.
 
 ## Use Case
 
@@ -20,7 +24,7 @@ User can type a word (FRECUENCY CALCULATOR) to find its frequency
 Normal Flow:
 After the page loads, the user will be presented with an input text to introduce a desired text of words, as well as an “analyze” button, this button are disabled when text is empty.
 As user types the text, as soon as the program detects more than 1 word, the analyse button will be enabled, under the textfield it will display automatically the amount of words the user types.
-As the user hits Calculate:  - The program will display the text, as well of three widgets: - Top N words widget : which will allow the user to read the most frequent “n” words, the user is able to change the “N” number via a textfield/stepper - Highest frequency words widget: this will display the overall most frequently used words in the text - Frequency Calculator widget: this widget will offer the capability to type a word and display its frequency in the text, when the word is found in the text, as a bonus user experience, the program will collect a photograph from the internet of the word filled in the widget
+As the user hits Calculate: - The program will display the text, as well of three widgets:- Top N words widget : which will allow the user to read the most frequent “n” words, the user is able to change the “N” number via a textfield/stepper- Highest frequency words widget: this will display the overall most frequently used words in the text- Frequency Calculator widget: this widget will offer the capability to type a word and display its frequency in the text, when the word is found in the text, as a bonus user experience, the program will collect a photograph from the internet of the word filled in the widget
 
 Extensions:
 1A. After displaying the results, a new button appears “Start again”
