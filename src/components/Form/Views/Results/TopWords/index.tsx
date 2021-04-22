@@ -63,6 +63,11 @@ const TopWords: React.FunctionComponent<ITopWords> = (props: ITopWords) => {
                     defaultValue={topNumberOfWords}
                     onChange={(ev) => setTopNumberOfWords(Number(ev.target.value))}
                     label=""
+                    InputProps={{
+                        inputProps: { 
+                            max: 100, min: 1 
+                        }
+                    }}
                     type="number"
                     InputLabelProps={{
                         shrink: true,
