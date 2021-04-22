@@ -1,9 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React from 'react'
+import { shallow } from 'enzyme';
 import WordAnalyzerApp from './WordAnalyzerApp';
 
-test('renders learn react link', () => {
-  render(<WordAnalyzerApp />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('<WordAnalyzerApp />', () => {
+  let component
+
+  beforeEach(() => {
+    component = shallow(<WordAnalyzerApp />)
+  })
+  test('It should mount', () => {
+    expect(component.length).toBe(1)
+  })
 });

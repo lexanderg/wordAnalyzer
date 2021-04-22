@@ -11,7 +11,7 @@ export class WordFrequencyAnalyzer implements IWordFrequencyAnalyzer {
         this._wordFrecuencyHelper = new WordFrequencyAnalyzerHelper();
     }
 
-    public calculateHighestFrequency = (text: string): any => {
+    public calculateHighestFrequency = (text: string): number => {
 
         return this.calculateMostFrequentNWords(text, 1)[0].getFrequency();
     }
