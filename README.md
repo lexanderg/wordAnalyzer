@@ -1,4 +1,4 @@
-# Word Analyzer showcase by Alexander Gomez
+# Word Analyzer showcase
 
 Primary Actor: User
 
@@ -20,6 +20,9 @@ Extensions:
 1A. After displaying the results, a new button appears “Start again”
 As the user clicks this button, it will clear the text field for a new operation.
 
+## Live demo
+
+you can visit http://www.machinedevops.com/wordanalyzer/
 
 ## Available Scripts
 
