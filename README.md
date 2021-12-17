@@ -1,9 +1,5 @@
 # Word Analyzer showcase
 
-## Live demo
-
-http://www.machinedevops.com/wordanalyzer/
-
 ## User Story
 
 As a User I want to be able to input text in a program, that calculates highest frequency, most popular words, and frequency of a specific word of my text, so that I do not need to count them manually.
